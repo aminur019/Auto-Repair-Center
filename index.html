@@ -1,0 +1,1203 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   GoHighLevel Enhanced Website
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .parallax {
+            background-attachment: fixed;
+        }
+        .hidden {
+            display: none;
+        }
+        .block {
+            display: block;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+		<!------------------------------------------------------------->
+
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+        .carousel-item {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+        .brand-item:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+	
+		<!------------------------------------------------------------->
+		  .footer-link:hover {
+            text-decoration: underline;
+        }
+        .social-icon:hover {
+            transform: rotate(360deg);
+            transition: transform 0.5s;
+        }
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1a202c;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .back-to-top.visible {
+            display: block;
+        }
+		.fade-in-left, .fade-in-right {
+            opacity: 0;
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-in-left {
+            transform: translateX(-20px);
+        }
+        .fade-in-right {
+            transform: translateX(20px);
+        }
+        .fade-in-left.visible, .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+		        .icon-teal {
+            color: #38b2ac; /* Tailwind's teal-500 color */
+		
+        }
+		.about-imag img{width:600px; height:400px;transition: all 0.3s ease-in-out;}
+		.img01{height:400px}
+		.about-imag img:hover{height:400px}
+		.about-imag img:not(:hover){height:100px}
+		.about-imag:not(:hover) .img01{height:400px}
+  </style>
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+ </head>
+ <body class="bg-gray-100">
+  <!-- Header Section -->
+<header class="sticky top-0 bg-white p-4 flex justify-between items-center shadow-md z-50">
+   <div class="flex items-center">
+    <img alt="Company Logo with a sleek design, featuring a car silhouette and the company name in bold letters" class="h-20" height="80" src="https://mastertechautorepaircenter.com/wp-content/uploads/2023/01/Screenshot_18.png" width="200"/>
+   </div>
+   <nav class="hidden md:flex space-x-4">
+    <a class="text-gray-700 hover:text-blue-500" href="#">
+     Home
+    </a>
+    <a class="text-gray-700 hover:text-blue-500" href="#">
+     Services
+    </a>
+    <a class="text-gray-700 hover:text-blue-500" href="#">
+     Testimonials
+    </a>
+    <a class="text-gray-700 hover:text-blue-500" href="#">
+     Contact
+    </a>
+   </nav>
+   <div class="flex items-center">
+    <a class="hidden md:block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" href="#">
+     Book Your Service Today
+    </a>
+    <button class="md:hidden text-gray-700 focus:outline-none ml-4" id="menu-toggle">
+     <i class="fas fa-bars text-2xl">
+     </i>
+    </button>
+   </div>
+  </header>
+  <nav class="hidden md:hidden bg-white shadow-lg z-50 fixed w-full" id="mobile-menu">
+   <a class="block px-4 py-2 text-gray-700 hover:bg-gray-200" href="#">
+    Home
+   </a>
+   <a class="block px-4 py-2 text-gray-700 hover:bg-gray-200" href="#">
+    Services
+   </a>
+   <a class="block px-4 py-2 text-gray-700 hover:bg-gray-200" href="#">
+    Testimonials
+   </a>
+   <a class="block px-4 py-2 text-gray-700 hover:bg-gray-200" href="#">
+    Contact
+   </a>
+   <a class="block px-4 py-2 bg-blue-500 text-white hover:bg-blue-600" href="#">
+    Book Your Service Today
+   </a>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative">
+   <img alt="Hero Image with a car in a modern, well-lit garage, showcasing a professional auto service environment" class="w-full h-[600px] object-cover parallax" height="800" src="https://storage.googleapis.com/a1aa/image/y0pdMBr8Sn4ZIlxQslacZ7P5AeVaG2DLuejuKuKcTwfoyMRoA.jpg" width="1920"/>
+   <div class="absolute inset-0 flex flex-col md:flex-row justify-center md:justify-between items-center text-center md:text-left text-white bg-black bg-opacity-50 p-4 md:p-8">
+    <div class="md:w-1/2 fade-in">
+     <h1 class="text-4xl font-bold mb-4">
+      Your Trusted Auto Service
+     </h1>
+     <p class="text-xl mb-6">
+      Quality service you can rely on, ensuring your vehicle is in top condition.
+     </p>
+     <div class="space-x-6 mb-6">
+      <a class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" href="#">
+       Book Your Service Today
+      </a>
+      <a class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800" href="#">
+       Get a Free Estimate
+      </a>
+     </div>
+    </div>
+    <!-- Booking Form -->
+    <div class="p-6 rounded shadow-lg w-full max-w-md md:ml-8 fade-in" style=" background-color: rgb(255 255 255 / 70%);}">
+     <h2 class="text-2xl font-bold mb-4 text-gray-800">
+      Book Your Service
+     </h2>
+     <form>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+        Name
+       </label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" placeholder="Your Name" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        Email
+       </label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" placeholder="Your Email" type="email"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+        Phone
+       </label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" placeholder="Your Phone Number" type="tel"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="service">
+        Service Needed
+       </label>
+       <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="service">
+        <option>
+         Brake Repair
+        </option>
+        <option>
+         Oil Change
+        </option>
+        <option>
+         Tire Rotation
+        </option>
+        <option>
+         General Maintenance
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="date">
+        Preferred Date
+       </label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="date"/>
+      </div>
+      <div class="flex items-center justify-between">
+       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Submit
+       </button>
+      </div>
+     </form>
+    </div>
+   </div>
+  </section>
+  
+    <!-- About  Us Section -->
+  <section class="bg-white p-6 rounded-lg shadow-lg mt-6 flex flex-col md:flex-row">
+    <div class="md:w-1/2 p-8">
+     <h2 class="text-3xl font-bold mb-4">
+      About MasterTech Auto Repair Center
+     </h2>
+     <p class="mb-4">
+      At MasterTech Auto Repair Center, we take pride in being a family-owned business that has been serving the San Antonio area for over two decades. Our mission is simple: to provide honest, reliable, and high-quality auto repair services that our customers can trust. Whether it’s routine maintenance, complex repairs, or diagnostics, our certified technicians are equipped with the latest tools and technology to ensure your vehicle runs smoothly and safely.
+     </p>
+     <p class="mb-4">
+      We understand that your car is more than just a means of transportation—it’s a part of your daily life. That’s why we treat every vehicle as our own, with the utmost care and attention to detail. From brake services to engine repairs, we stand behind our work with integrity and transparency, making sure you receive the best possible service every time.
+     </p>
+     <p>
+      Thank you for choosing MasterTech Auto Repair Center. We are committed to earning your trust, one repair at a time.
+     </p>
+    </div>
+    <div class="md:w-1/2 flex flex-col space-y-4 about-imag">
+     <img alt="Image of a mechanic working on a car engine" class="img01" src="about02.png" />
+     <img alt="Image of a car being lifted in an auto repair shop" class="img02" src="about01.png" />
+	 
+    </div>
+   </section>
+  
+  
+  
+  
+  
+  
+  <!-- Why Choose Us Section -->
+  <section class="py-16">
+   <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8 fade-in">
+     Why Choose Us
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="p-6 border rounded hover:shadow-lg transition-shadow hover-grow fade-in">
+      <i class="fas fa-tools text-4xl text-blue-500 mb-4">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       ASE-Certified Technicians
+      </h3>
+      <p>
+       Our technicians are ASE-certified, ensuring they have the expertise and knowledge to handle all your auto service needs. With years of experience and continuous training, they are equipped to diagnose and repair your vehicle efficiently and effectively.
+      </p>
+     </div>
+     <div class="p-6 border rounded hover:shadow-lg transition-shadow hover-grow fade-in">
+      <i class="fas fa-star text-4xl text-blue-500 mb-4">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Top-Rated Service
+      </h3>
+      <p>
+       We pride ourselves on providing top-rated service, as evidenced by our numerous positive reviews and high ratings from satisfied customers. Our commitment to quality and customer satisfaction sets us apart in the auto service industry.
+      </p>
+     </div>
+     <div class="p-6 border rounded hover:shadow-lg transition-shadow hover-grow fade-in">
+      <i class="fas fa-clock text-4xl text-blue-500 mb-4">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Convenient Hours
+      </h3>
+      <p>
+       We understand that your time is valuable, which is why we offer convenient hours to fit your busy schedule. Whether you need early morning or late evening appointments, we are here to accommodate your needs and ensure your vehicle is serviced promptly.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Services We Offer Section -->
+  <section class="py-16 bg-gradient-to-r from-blue-500 to-teal-500 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 fade-in">Services We Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-8 border rounded-lg bg-white text-gray-800 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Brake Repair Service showing a mechanic working on a car's brake system" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/xDPytyU4evX0YarFH6u2Dz7JDIW8uzApIRwmApKInXyMZVEKA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Brake Repair</h3>
+                    <p>Ensure your safety with our comprehensive brake repair services. Our skilled technicians will inspect, diagnose, and repair your brake system to ensure it functions correctly, providing you with peace of mind on the road.</p>
+                </div>
+                <div class="p-8 border rounded-lg bg-white text-gray-800 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Oil Change Service showing a mechanic pouring oil into a car engine" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/EqRAHhMDkO7xPxS7tpsyQjNNrGyGu4eSQLmbxMrJXy7RZVEKA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Oil Changes</h3>
+                    <p>Keep your engine running smoothly with regular oil changes. Our oil change service includes a thorough inspection of your vehicle's engine, ensuring it remains in optimal condition and prolonging its lifespan.</p>
+                </div>
+                <div class="p-8 border rounded-lg bg-white text-gray-800 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Tire Rotation Service showing a mechanic rotating a car's tires" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/8IpGxiAS1BrFPhm8oRT74co0LYxTw7i710nxDDZuvUFnsKCF.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Tire Rotation</h3>
+                    <p>Extend the life of your tires with our tire rotation services. Regular tire rotation helps to ensure even tire wear, improving your vehicle's handling and safety while maximizing the lifespan of your tires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center fade-in">Detailed Service Pricing</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Oil Change Service showing a mechanic pouring oil into a car engine" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/EqRAHhMDkO7xPxS7tpsyQjNNrGyGu4eSQLmbxMrJXy7RZVEKA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Oil Change Services</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Synthetic Blend Oil Change (Up to 4 QT): $29.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Full Synthetic Oil Change (Up to 4 QT): $44.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Mobile 1 Oil Change (Up to 4 QT): $69.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Most cars, light trucks oil change includes up to 4 quarts of motor oil. Some vehicles require special oil and/or filters, which will cost extra. Tax and disposal fees cost extra. Cannot combine with any other offer.</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Brake Service showing a mechanic working on a car's brake system" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/NsjLB7vmqey2VSRY5ebygFOJUuVW20bD1hRG8BowaPHVyqIUA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Brake Services</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Brake Pad Service: $99.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Brake Pads & Rotors Bundle (Most Cars): $250</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Brake Fluid Service: $49.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Brake Shoes Service: $149.99</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="A/C Service showing a mechanic working on a car's air conditioning system" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/5Wx73ej0P00RW6t9drqhGzMpnCZ3AKwd0pvfMK1ihAGRyqIUA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">A/C Services</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> A/C Service R-134: $89.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> A/C Service 1234yf: $179.99</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Diagnostics Service showing a mechanic using a diagnostic tool on a car" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/mehxxA1tLmRceUPG8jdOYp4ux5UC9dxNaOAmkWfqTuk6kVRoA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Diagnostics & Inspections</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Computer Diagnostic: $65.00</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Used Car Inspection: $65.00</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> No-Start Diagnostic: Included in diagnostics</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Drive-Ability Issues: Included in diagnostics</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Fluid Flush Service showing a mechanic flushing a car's fluid system" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/fodC388gWLXtXKK3p8OWt23TcTF6IvOzkctquu0hVPBNZVEKA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Fluid Flushes (Most Cost)</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Power Steering Flush: $69.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Brake Fluid Service: $49.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Engine Coolant Flush: $79.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Radiator Service: $59.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Engine Oil Flush: $19.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Differential Service: $69.99</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Filter Replacement Service showing a mechanic replacing a car's air filter" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/uimDRBVwSMqoO9Pfj2sxo8TAZa35JZMr3hSPxwEA4Y8SZVEKA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Filter Replacements</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Engine Air Filter: $19.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Cabin Air Filter: $21.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Air Filters: Included in tune-ups</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Tune-Up Service showing a mechanic tuning up a car engine" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/wwzpegj8tfoaREHAx721DnSeagz9qwsgV1xL25eblknPJriQB.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Tune-Ups</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> 4-Cylinder Tune-Up (Includes spark plugs, air filter, fuel injection cleaner): $99.99 (Start at for most cars)</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> 6-Cylinder Tune-Up (Includes spark plugs, air filter, fuel injection cleaner): $189.99 (Start at for most cars)</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> 8-Cylinder Tune-Up (Includes spark plugs, air filter, fuel injection cleaner): $279.99 (Start at for most cars)</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Transmission Service showing a mechanic working on a car's transmission" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/wfwEt5fF2upBTEGro8orlL9fnRpsISSuriAkoklubbaAlVRoA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Transmission Services</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Automatic Transmission Service: $179.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Manual Transmission Service: $99.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Replace Transmission: Call for pricing</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Tire and Wiper Service showing a mechanic replacing a car's wiper blades" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/uEkWjxL8ukKjCpUP5p9FWVRnFJBwlBAf4yUfniDuAe7fJriQB.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Tires & Wiper Services</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Tire Rotation: $29.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> New Tire Sales: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Wiper Blades Replacement (For all makes and models): Starting at $7.99</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="Specialized Service showing a mechanic working on a car's fuel injector" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/dUM6EuhHuHJyBVMcc9axQadh0h3SfbqF1IfgLuRywveIlVRoA.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">Specialized Services</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Fuel Injector Service: $79.99</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Certified Auto Repair: Call for pricing</li>
+                    </ul>
+                </div>
+                <div class="p-8 border rounded-lg bg-gray-50 hover:shadow-2xl transition-shadow fade-in">
+                    <img alt="General Repair Service showing a mechanic working on a car engine" class="w-full h-48 object-cover mb-6 rounded-lg" src="https://storage.googleapis.com/a1aa/image/kiPodMTyj9aaId9RZxHWV6fzt7UfgjJtrvDXzedNsfDdJriQB.jpg"/>
+                    <h3 class="text-2xl font-semibold mb-4">General Repairs & Maintenance</h3>
+                    <ul class="list-none list-inside space-y-2">
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Replace Engine: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Water Pump Replacement: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Timing Belts Replacement: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Electrical Diagnostics: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> CV Axles: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Differential & Transfer Case Service: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Oil & Fluid Leaks Repairs: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Alternator Testing & Replacement: Call for pricing</li>
+                        <li><i class="fas fa-angle-double-right icon-teal"></i> Serpentine Belt & Drive Belt Replacement: Call for pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- Our Process Section -->
+  <section class="py-16 bg-white">
+   <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8 fade-in">
+     Our Process
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="p-6 border rounded hover:shadow-lg transition-shadow hover-grow fade-in">
+      <i class="fas fa-calendar-check text-4xl text-blue-500 mb-4">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Step 1: Schedule
+      </h3>
+      <p>
+       Book your appointment online or give us a call. Our user-friendly online booking system allows you to schedule your service at your convenience, and our friendly staff is always ready to assist you over the phone.
+      </p>
+     </div>
+     <div class="p-6 border rounded hover:shadow-lg transition-shadow hover-grow fade-in">
+      <i class="fas fa-car text-4xl text-blue-500 mb-4">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Step 2: Drop Off
+      </h3>
+      <p>
+       Drop off your vehicle at our service center. Our team will greet you and ensure that all your service needs are understood and documented. We strive to make the drop-off process as quick and seamless as possible.
+      </p>
+     </div>
+     <div class="p-6 border rounded hover:shadow-lg transition-shadow hover-grow fade-in">
+      <i class="fas fa-thumbs-up text-4xl text-blue-500 mb-4">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Step 3: Pick Up
+      </h3>
+      <p>
+       Pick up your vehicle once the service is complete. We will notify you when your vehicle is ready, and our team will provide a detailed explanation of the services performed. Your satisfaction is our top priority.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-------------------------------------------------------------------------------------------------------------------------------------------->
+  
+   <section class="my-8" id="car-brands">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     Car Makes and Models We Service
+    </h2>
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+     <input class="border p-2 rounded w-full sm:w-1/3 mb-4 sm:mb-0" placeholder="Search car brand..." type="text"/>
+     <select class="border p-2 rounded w-full sm:w-auto">
+      <option value="">
+       All Categories
+      </option>
+      <option value="sedans">
+       Sedans
+      </option>
+      <option value="suvs">
+       SUVs
+      </option>
+      <option value="trucks">
+       Trucks
+      </option>
+      <option value="electric">
+       Electric Vehicles
+      </option>
+     </select>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 fade-in">
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Toyota" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/73WrdJKFsMZPNBBouhriqVAZXLSBrtXwvUa3QpPj6sVR3JCF.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Toyota
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Honda" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/bOGBgBVDKE5PP91tfdNsK3ww1wqiEQmtuheom78f9PKQ6ORoA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Honda
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Ford" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/Hlh5ey7Q7dwNZKTmeOGUqfFAkuH7kwHjxSeTTySRTMo3zdiQB.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Ford
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Chevrolet" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/e6k97pPvyuSWJq5Kx7zDCavP4ML6BCGujcarK42Ze8Z6cnIUA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Chevrolet
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of BMW" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/f6mKopR6eMpjfJafeMkf1fNlCtipkeXIurKDlYJunIi2EdnIUA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       BMW
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Mercedes-Benz" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/ieImfK84ywveCIMU0n0oiOhwXYENfnOL5x69iJQEeMxSp7EhC.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Mercedes-Benz
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Audi" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/xq3tvjBMll5wAl1zQ3PTHptIy91t7ifnJO95RFRVApoluTEKA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Audi
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Tesla" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/Ew9CTLvyHMrfdSQuScguHx8OizbCo9DfgexHBQOgeNT70diQB.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Tesla
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Nissan" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/oAudfAu178yzdySWsZ6rSyFPaZouPPxEOaUlaNhU4uWmuTEKA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Nissan
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Hyundai" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/sePPjqlX5JQCa6L2bEMFUP4Nq0fOeipbawSlFa8b1WF35ORoA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Hyundai
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Kia" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/5Bq2V22ttzbHJhvG9ft3k6L1VZBAg5trcVCYrpWxZnMhuTEKA.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Kia
+      </p>
+     </div>
+     <div class="p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center brand-item">
+      <img alt="Logo of Volkswagen" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/vpmUIiOpPW7MGdctfaKDyIsVwfaIl3F6e8nfMe1lG6N6n7EhC.jpg" width="100"/>
+      <p class="mt-2 font-bold">
+       Volkswagen
+      </p>
+     </div>
+    </div>
+    <div class="text-center mt-6">
+     <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
+      Check Compatibility
+     </button>
+    </div>
+   </section>
+   <section class="my-8" id="testimonials">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     Customer Testimonials
+    </h2>
+    <div class="relative overflow-hidden">
+     <div class="carousel flex">
+      <div class="carousel-item p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center">
+       <div class="flex flex-col items-center mb-4">
+        <img alt="Photo of customer John Doe" class="w-12 h-12 rounded-full mb-2" height="50" src="https://storage.googleapis.com/a1aa/image/K187jpafRfqpAUfWfzjmamzfcVtI41Di1DeoE3dh2BGwR3JCF.jpg" width="50"/>
+        <div>
+         <h3 class="font-bold">
+          John Doe
+         </h3>
+         <p class="text-sm text-gray-600">
+          CEO, Example Corp
+         </p>
+         <div class="flex items-center justify-center mt-2">
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+         </div>
+        </div>
+       </div>
+       <p>
+        "Excellent service! My car has never run better. Highly recommend!"
+       </p>
+       <div class="flex justify-center space-x-4 mt-4">
+        <button class="text-blue-500 hover:underline">
+         Helpful
+        </button>
+        <button class="text-blue-500 hover:underline">
+         Share
+        </button>
+       </div>
+      </div>
+      <div class="carousel-item p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center">
+       <div class="flex flex-col items-center mb-4">
+        <img alt="Photo of customer Jane Smith" class="w-12 h-12 rounded-full mb-2" height="50" src="https://storage.googleapis.com/a1aa/image/zAiZ0X8KuprhFp7bcrW22FgkMHpsnOfnthh0pdyGDa9guTEKA.jpg" width="50"/>
+        <div>
+         <h3 class="font-bold">
+          Jane Smith
+         </h3>
+         <p class="text-sm text-gray-600">
+          Marketing Manager, ABC Inc.
+         </p>
+         <div class="flex items-center justify-center mt-2">
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+         </div>
+        </div>
+       </div>
+       <p>
+        "Great customer service and very knowledgeable staff. Will definitely come back!"
+       </p>
+       <div class="flex justify-center space-x-4 mt-4">
+        <button class="text-blue-500 hover:underline">
+         Helpful
+        </button>
+        <button class="text-blue-500 hover:underline">
+         Share
+        </button>
+       </div>
+      </div>
+      <div class="carousel-item p-4 bg-white shadow-md rounded hover:shadow-lg transition-shadow duration-300 text-center">
+       <div class="flex flex-col items-center mb-4">
+        <img alt="Photo of customer Michael Brown" class="w-12 h-12 rounded-full mb-2" height="50" src="https://storage.googleapis.com/a1aa/image/ks0D3D6yVlq6O19GORKu47WBHlRiXTU5jwXPs1w3KgPO3JCF.jpg" width="50"/>
+        <div>
+         <h3 class="font-bold">
+          Michael Brown
+         </h3>
+         <p class="text-sm text-gray-600">
+          Engineer, XYZ Ltd.
+         </p>
+         <div class="flex items-center justify-center mt-2">
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+          <i class="fas fa-star text-yellow-500">
+          </i>
+         </div>
+        </div>
+       </div>
+       <p>
+        "Quick and efficient service. My go-to place for car maintenance."
+       </p>
+       <div class="flex justify-center space-x-4 mt-4">
+        <button class="text-blue-500 hover:underline">
+         Helpful
+        </button>
+        <button class="text-blue-500 hover:underline">
+         Share
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="absolute inset-y-0 left-0 flex items-center">
+      <button class="bg-gray-800 text-white p-2 rounded-full" id="prev">
+       <i class="fas fa-chevron-left">
+       </i>
+      </button>
+     </div>
+     <div class="absolute inset-y-0 right-0 flex items-center">
+      <button class="bg-gray-800 text-white p-2 rounded-full" id="next">
+       <i class="fas fa-chevron-right">
+       </i>
+      </button>
+     </div>
+    </div>
+   </section>
+
+   
+   
+   <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+   <section class="py-12 bg-gray-100" id="service-areas">
+       <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">
+         Proudly Serving San Antonio and Surrounding Communities
+        </h2>
+        <p class="text-center mb-8">
+         Located in the heart of San Antonio, we proudly serve drivers from the following neighborhoods and beyond:
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-start space-y-4 md:space-y-0 md:space-x-4">
+         <div class="w-full md:w-1/2">
+          <iframe allowfullscreen="" class="w-full h-96" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.123456789!2d-98.493628!3d29.424122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDI1JzI2LjgiTiA5OMKwMjknMzMuMCJX!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" style="border:0;">
+          </iframe>
+         </div>
+         <div class="w-full md:w-1/2 space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+           <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">
+             Alamo Heights
+            </h3>
+            <p class="text-gray-700">
+             Address: 123 Alamo Heights St, San Antonio, TX 78209
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Phone: (210) 123-4567
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Email: alamoheights@mastertechauto.com
+            </p>
+            <hr class="my-2"/>
+           </div>
+           <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">
+             Stone Oak
+            </h3>
+            <p class="text-gray-700">
+             Address: 456 Stone Oak Pkwy, San Antonio, TX 78258
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Phone: (210) 234-5678
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Email: stoneoak@mastertechauto.com
+            </p>
+            <hr class="my-2"/>
+           </div>
+           <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">
+             Castle Hills
+            </h3>
+            <p class="text-gray-700">
+             Address: 789 Castle Hills Rd, San Antonio, TX 78213
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Phone: (210) 345-6789
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Email: castlehills@mastertechauto.com
+            </p>
+            <hr class="my-2"/>
+           </div>
+           <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">
+             Helotes
+            </h3>
+            <p class="text-gray-700">
+             Address: 101 Helotes Blvd, Helotes, TX 78023
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Phone: (210) 456-7890
+            </p>
+            <hr class="my-2"/>
+            <p class="text-gray-700">
+             Email: helotes@mastertechauto.com
+            </p>
+            <hr class="my-2"/>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="text-center mt-8">
+         <a class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition" href="#contact">
+          Not sure if we’re in your area? Reach out to us today!
+         </a>
+        </div>
+       </div>
+      </section>
+      <!-- Amenities Section -->
+      <section class="py-12" id="amenities">
+       <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">
+         Your Comfort is Our Priority
+        </h2>
+        <p class="text-center mb-8">
+         At MasterTech Auto Repair Center, we’re more than just a place for repairs—we’re dedicated to your comfort and convenience. Our amenities include:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+         <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-2">
+           <i class="fas fa-wifi text-blue-500 text-3xl">
+           </i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-center">
+           Complimentary Wi-Fi
+          </h3>
+          <p class="text-center">
+           A comfortable waiting area with complimentary Wi-Fi and coffee.
+          </p>
+         </div>
+         <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-2">
+           <i class="fas fa-tools text-blue-500 text-3xl">
+           </i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-center">
+           Same-Day Service
+          </h3>
+          <p class="text-center">
+           Same-day service on most repairs.
+          </p>
+         </div>
+         <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-2">
+           <i class="fas fa-shuttle-van text-blue-500 text-3xl">
+           </i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-center">
+           Free Shuttle Service
+          </h3>
+          <p class="text-center">
+           Free shuttle service to and from your home or office.
+          </p>
+         </div>
+         <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-2">
+           <i class="fas fa-car text-blue-500 text-3xl">
+           </i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-center">
+           Complimentary Inspection
+          </h3>
+          <p class="text-center">
+           Complimentary vehicle inspection with every service.
+          </p>
+         </div>
+         <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-2">
+           <i class="fas fa-child text-blue-500 text-3xl">
+           </i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-center">
+           Kid-Friendly Play Area
+          </h3>
+          <p class="text-center">
+           Kid-friendly play area to keep your little ones entertained.
+          </p>
+         </div>
+        </div>
+        <div class="flex flex-wrap justify-center space-x-4">
+         <img alt="Comfortable waiting area with chairs, coffee table, and a coffee machine" class="hover:shadow-lg transition" height="200" src="https://storage.googleapis.com/a1aa/image/xyptDy5d8wqWDtl7KeTYLkSjQPKgG16OaY6HvficxVTFOoIUA.jpg" width="300"/>
+         <img alt="Clean and professional auto repair shop with tools and equipment" class="hover:shadow-lg transition" height="200" src="https://storage.googleapis.com/a1aa/image/lvOKc421FfyeKkR9FEMINcvUvT5B2NCniufElBCXHYGNcQRoA.jpg" width="300"/>
+         <img alt="Comfortable seating area with magazines and a TV" class="hover:shadow-lg transition" height="200" src="https://storage.googleapis.com/a1aa/image/34kyHpxELDIqFhT6pJMh3g6CGkkoe8NMBBx3I1vD8qxPPUEKA.jpg" width="300"/>
+         <img alt="Modern and clean auto repair shop with multiple service bays" class="hover:shadow-lg transition" height="200" src="https://storage.googleapis.com/a1aa/image/U6MBGjewlA1ZSCP5ABvGiu8OmRPKrKyQKTuw8mFy9fideQRoA.jpg" width="300"/>
+        </div>
+       </div>
+      </section>
+      <!-- FAQs Section -->
+      <section class="py-12 bg-gray-100" id="faqs">
+       <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">
+         Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleFaq(this)">
+           <h3 class="font-bold text-xl mb-2">
+            Q: How long do repairs take?
+           </h3>
+           <i class="fas fa-chevron-down text-gray-500">
+           </i>
+          </div>
+          <p class="text-gray-700 hidden">
+           A: Most services are completed on the same day. For major repairs, we’ll provide updates and an estimated completion time.
+          </p>
+         </div>
+         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleFaq(this)">
+           <h3 class="font-bold text-xl mb-2">
+            Q: Do you offer warranties?
+           </h3>
+           <i class="fas fa-chevron-down text-gray-500">
+           </i>
+          </div>
+          <p class="text-gray-700 hidden">
+           A: Yes! We back all repairs with a 2-year warranty on both parts and labor.
+          </p>
+         </div>
+         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleFaq(this)">
+           <h3 class="font-bold text-xl mb-2">
+            Q: Can I wait while my car is serviced?
+           </h3>
+           <i class="fas fa-chevron-down text-gray-500">
+           </i>
+          </div>
+          <p class="text-gray-700 hidden">
+           A: Absolutely! Feel free to relax in our waiting area, equipped with free Wi-Fi and coffee.
+          </p>
+         </div>
+        </div>
+        <div class="text-center mt-8">
+         <a class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition" href="#contact">
+          Have more questions? Contact us today for personalized assistance.
+         </a>
+        </div>
+       </div>
+      </section>
+      <!-- Final CTA Section -->
+      <section class="py-12" id="final-cta">
+       <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+         Ready to Experience Unmatched Auto Repair Excellence?
+        </h2>
+        <p class="text-lg mb-8">
+         Let MasterTech Auto Repair Center get you back on the road—safely and efficiently.
+        </p>
+        <div class="space-x-4">
+         <a class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition" href="#contact">
+          Schedule Your Service Today
+         </a>
+         <a class="inline-block bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition" href="tel:XXX-XXX-XXXX">
+          Call Us Now
+         </a>
+        </div>
+       </div>
+      </section>
+      <!-- Contact Form Section -->
+      <section class="py-12 bg-gray-100" id="contact">
+       <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-start">
+         <div class="w-full md:w-1/2 mb-8 md:mb-0">
+          <h2 class="text-3xl font-bold mb-4">
+           Contact Us
+          </h2>
+          <h3 class="text-xl font-bold mt-8">
+           Stay Connected with MasterTech Auto Repair Center
+          </h3>
+          <p class="mb-4">
+           We’re here to provide exceptional service to our valued customers.
+          </p>
+          <p class="mb-4">
+           Address: 123 Main St, San Antonio, TX 78209
+          </p>
+        
+          <p class="mb-4">
+           Phone: (210) 123-4567
+          </p>
+          
+          <p class="mb-4">
+           Email: contact@mastertechauto.com
+          </p>
+          
+         </div>
+         <div class="w-full md:w-1/2">
+          <form class="bg-white p-6 rounded-lg shadow-md">
+           <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+             Name
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Your Name"/>
+           </div>
+           <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+             Email
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="Your Email"/>
+           </div>
+           <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+             Phone
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" name="phone" type="tel" placeholder="Your Phone Number"/>
+           </div>
+           <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+             Message
+            </label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" placeholder="Your Message" rows="4">
+            </textarea>
+           </div>
+           <div class="text-center">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition" type="submit">
+             Send Message
+            </button>
+           </div>
+          </form>
+         </div>
+        </div>
+       </div>
+      </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
+                <!-- Logo and About Us Column -->
+                <div>
+                    <img alt="Company logo with a modern and sleek design" height="50" src="https://mastertechautorepaircenter.com/wp-content/uploads/2023/01/Screenshot_18.png" width="150" class="mx-auto md:mx-0"/>
+                    <p class="mt-4">
+                        We are a leading company in providing top-notch services and solutions to our clients. Our mission is to deliver excellence in every project we undertake.
+                    </p>
+                    <div class="flex justify-center md:justify-start mt-4">
+                        <a href="#" class="social-icon mx-2 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon mx-2 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon mx-2 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon mx-2 text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Services Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link block mb-2">Web Development</a></li>
+                        <li><a href="#" class="footer-link block mb-2">App Development</a></li>
+                        <li><a href="#" class="footer-link block mb-2">SEO Services</a></li>
+                        <li><a href="#" class="footer-link block mb-2">Graphic Design</a></li>
+                    </ul>
+                </div>
+                <!-- Company Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link block mb-2">About Us</a></li>
+                        <li><a href="#" class="footer-link block mb-2">Careers</a></li>
+                        <li><a href="#" class="footer-link block mb-2">Blog</a></li>
+                        <li><a href="#" class="footer-link block mb-2">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Support Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link block mb-2">Help Center</a></li>
+                        <li><a href="#" class="footer-link block mb-2">FAQs</a></li>
+                        <li><a href="#" class="footer-link block mb-2">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link block mb-2">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <form id="newsletter-form" class="flex flex-col items-center md:items-start">
+                        <input type="email" id="email" class="p-2 mb-4 text-gray-900" placeholder="Enter your email" required>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-center py-4 mt-8">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+  <script>
+  
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Toggle mobile menu
+    document.getElementById('menu-toggle')?.addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        if (menu) {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('block');
+        }
+    });
+	
+
+
+    // Toggle FAQ items
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const answer = this.nextElementSibling; // Assuming answer is the next element after the question
+            answer.classList.toggle('hidden');
+        });
+    });
+
+    // Scroll effect for fade-in elements
+    const fadeInElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Carousel functionality
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let index = 0;
+
+    function showItem(index) {
+        const offset = -index * 100;
+        items.forEach(item => {
+            item.style.transform = `translateX(${offset}%)`;
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        index = (index > 0) ? index - 1 : items.length - 1;
+        showItem(index);
+    });
+
+    nextButton.addEventListener('click', () => {
+        index = (index < items.length - 1) ? index + 1 : 0;
+        showItem(index);
+    });
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+        nextButton.click();
+    }, 5000); // Changed to 5000ms for clarity
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Newsletter Form Validation
+    const newsletterForm = document.getElementById('newsletter-form');
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById('email');
+        if (emailInput.value) {
+            emailInput.value = '';
+            alert('Thank you for subscribing!');
+        }
+    });
+});
+
+
+
+  </script>
+ </body>
+</html>
